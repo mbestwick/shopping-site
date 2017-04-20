@@ -8,6 +8,7 @@ Authors: Joel Burton, Christian Fernandez, Meggie Mahnken, Katie Byers.
 
 
 from flask import Flask, render_template, redirect, flash, session
+from flask_debugtoolbar import DebugToolbarExtension
 import jinja2
 
 import melons
@@ -166,3 +167,4 @@ def checkout():
 
 if __name__ == "__main__":
     app.run(debug=True)
+    DebugToolbarExtension(app)
