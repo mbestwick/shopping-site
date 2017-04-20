@@ -88,9 +88,6 @@ def show_shopping_cart():
         melon.qty = int(qty)
         melon.cost = melon.qty * melon.price
         total_cost += melon.cost
-        melon.cost = "${:.2f}".format(melon.cost)
-
-    total_cost = "${:.2f}".format(total_cost)
 
     return render_template("cart.html", melons=melon_objects, total_cost=total_cost)
 
